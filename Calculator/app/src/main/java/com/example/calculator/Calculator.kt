@@ -41,7 +41,7 @@ fun CalculatorScreen(modifier: Modifier = Modifier) {
     var operator by remember { mutableStateOf("") }
     var userIsEnteringNums by remember { mutableStateOf(true) }
 
-    fun buttonNum(buttext: String) {
+    fun buttonFunction(buttext: String) {
         when (buttext) {
             "CE" -> {
                 textStyle.value = textStyle.value.copy(fontSize = 100.sp)
@@ -117,41 +117,41 @@ fun CalculatorScreen(modifier: Modifier = Modifier) {
             Row(modifier = Modifier.fillMaxWidth().weight(1f), // Fill width for horizontal arrangement
                 horizontalArrangement = Arrangement.SpaceAround // Distribute buttons evenly
             ) {
-                CalculatorButton(text = "CE", modifier = Modifier.weight(1f), onClick = { buttonNum("CE") })
-                CalculatorButton(text = "C", modifier = Modifier.weight(1f), onClick = { buttonNum("C") })
-                CalculatorButton(text = "%", modifier = Modifier.weight(1f), onClick = { buttonNum("%") })
-                CalculatorButton(text = "÷", modifier = Modifier.weight(1f), onClick = { buttonNum("÷") })
+                CalculatorButton(text = "CE", modifier = Modifier.weight(1f), onClick = { buttonFunction("CE") })
+                CalculatorButton(text = "C", modifier = Modifier.weight(1f), onClick = { buttonFunction("C") })
+                CalculatorButton(text = "%", modifier = Modifier.weight(1f), onClick = { buttonFunction("%") })
+                CalculatorButton(text = "÷", modifier = Modifier.weight(1f), onClick = { buttonFunction("÷") })
             }
             Row(modifier = Modifier.fillMaxWidth().weight(1f),
                 horizontalArrangement = Arrangement.SpaceAround
             ) {
-                CalculatorButton(text = "7", modifier = Modifier.weight(1f), onClick = { buttonNum("7") })
-                CalculatorButton(text = "8", modifier = Modifier.weight(1f), onClick = { buttonNum("8")})
-                CalculatorButton(text = "9", modifier = Modifier.weight(1f), onClick = { buttonNum("9") })
-                CalculatorButton(text = "x", modifier = Modifier.weight(1f), onClick = { buttonNum("x") })
+                CalculatorButton(text = "7", modifier = Modifier.weight(1f), onClick = { buttonFunction("7") })
+                CalculatorButton(text = "8", modifier = Modifier.weight(1f), onClick = { buttonFunction("8")})
+                CalculatorButton(text = "9", modifier = Modifier.weight(1f), onClick = { buttonFunction("9") })
+                CalculatorButton(text = "x", modifier = Modifier.weight(1f), onClick = { buttonFunction("x") })
             }
             Row(modifier = Modifier.fillMaxWidth().weight(1f),
                 horizontalArrangement = Arrangement.SpaceAround
             ) {
-                CalculatorButton(text = "4", modifier = Modifier.weight(1f), onClick = { buttonNum("4") })
-                CalculatorButton(text = "5", modifier = Modifier.weight(1f), onClick = { buttonNum("5") })
-                CalculatorButton(text = "6", modifier = Modifier.weight(1f), onClick = { buttonNum("6") })
-                CalculatorButton(text = "-", modifier = Modifier.weight(1f), onClick = {buttonNum("-") })
+                CalculatorButton(text = "4", modifier = Modifier.weight(1f), onClick = { buttonFunction("4") })
+                CalculatorButton(text = "5", modifier = Modifier.weight(1f), onClick = { buttonFunction("5") })
+                CalculatorButton(text = "6", modifier = Modifier.weight(1f), onClick = { buttonFunction("6") })
+                CalculatorButton(text = "-", modifier = Modifier.weight(1f), onClick = {buttonFunction("-") })
             }
             Row(modifier = Modifier.fillMaxWidth().weight(1f),
                 horizontalArrangement = Arrangement.SpaceAround
             ) {
-                CalculatorButton(text = "1", modifier = Modifier.weight(1f), onClick = { buttonNum("1") })
-                CalculatorButton(text = "2", modifier = Modifier.weight(1f), onClick = { buttonNum("2") })
-                CalculatorButton(text = "3", modifier = Modifier.weight(1f), onClick = { buttonNum("3") })
-                CalculatorButton(text = "+", modifier = Modifier.weight(1f), onClick = { buttonNum("+") })
+                CalculatorButton(text = "1", modifier = Modifier.weight(1f), onClick = { buttonFunction("1") })
+                CalculatorButton(text = "2", modifier = Modifier.weight(1f), onClick = { buttonFunction("2") })
+                CalculatorButton(text = "3", modifier = Modifier.weight(1f), onClick = { buttonFunction("3") })
+                CalculatorButton(text = "+", modifier = Modifier.weight(1f), onClick = { buttonFunction("+") })
             }
             Row(
                 modifier = Modifier.fillMaxSize().weight(1f),
                 horizontalArrangement = Arrangement.SpaceAround
             ) {
                 Button(
-                    onClick = { buttonNum("0") },
+                    onClick = { buttonFunction("0") },
                     shape = RoundedCornerShape(16.dp),
                     modifier = Modifier
                         .weight(2f)
@@ -161,8 +161,8 @@ fun CalculatorScreen(modifier: Modifier = Modifier) {
                 ) {
                     Text(text = "0", fontSize = 25.sp)
                 }
-                CalculatorButton(text = ".", modifier = Modifier.weight(1f), onClick = { buttonNum(".") })
-                CalculatorButton(text = "=", modifier = Modifier.weight(1f), onClick = { buttonNum("=") })
+                CalculatorButton(text = ".", modifier = Modifier.weight(1f), onClick = { buttonFunction(".") })
+                CalculatorButton(text = "=", modifier = Modifier.weight(1f), onClick = { buttonFunction("=") })
             }
         }
     }

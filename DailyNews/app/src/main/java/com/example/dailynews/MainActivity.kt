@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
+import com.example.dailynews.ui.AppNavigation
 import com.example.dailynews.ui.HomeView
 import com.example.dailynews.ui.theme.DailyNewsTheme
 
@@ -19,7 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             DailyNewsTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) {innerPadding ->
-                    HomeView(modifier = Modifier.padding(innerPadding))
+                    AppNavigation(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
