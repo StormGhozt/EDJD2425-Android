@@ -19,7 +19,6 @@ fun ArticleDetailsScreen(articleUrl: String, navController: NavHostController) {
                     request: WebResourceRequest,
                     error: WebResourceError
                 ) {
-                    // Handle WebView errors, e.g., navigate to an error screen
                     navController.navigate("error_screen")
                 }
             }

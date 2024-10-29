@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.dailynews"
+    namespace = "com.example.spacefighter"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.dailynews"
+        applicationId = "com.example.spacefighter"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -66,16 +66,4 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-
-    implementation("io.coil-kt.coil3:coil-compose:3.0.0-rc01")
-    implementation("io.coil-kt.coil3:coil-network-okhttp:3.0.0-rc01")
-    implementation("com.google.code.gson:gson:2.11.0")
-    implementation("androidx.navigation:navigation-compose:2.8.2")
-    implementation("com.squareup.okhttp3:okhttp")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
-    implementation("androidx.navigation:navigation-compose:2.4.0-alpha10")
-    implementation("androidx.compose.ui:ui:1.3.0")
-    implementation ("androidx.compose.material:material:1.0.0")
-    implementation ("androidx.navigation:navigation-compose:2.4.0-alpha01")
-
 }
